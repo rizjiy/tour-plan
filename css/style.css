@@ -617,7 +617,14 @@ template {
   border-radius: 8px;
 }
 
-.swiper-container::after {
+.swiper-slide__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -767,11 +774,15 @@ template {
   height: 213px;
   background-color: black;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 590px;
   }
 }
 
@@ -797,6 +808,24 @@ template {
   }
   .search__input {
     width: 340px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .slider {
+    width: 100%;
   }
 }
 
@@ -860,6 +889,25 @@ template {
         -ms-flex-order: -1;
             order: -1;
     margin-left: 0;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .booking {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .booking__button {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
   }
 }
 
