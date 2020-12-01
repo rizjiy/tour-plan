@@ -21,3 +21,13 @@ var hotelSlider = new Swiper('.hotel-slider', {
         onlyInViewport: false,
       },
   })
+
+  $(window).scroll(function(){
+    $('.newsletter').bgscroll({
+      direction: 'top',
+    });
+  })
+
+ 
+
+
