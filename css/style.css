@@ -414,6 +414,10 @@ template {
   text-transform: uppercase;
 }
 
+.navbar-menu__item--mobile--visible {
+  display: none;
+}
+
 .logo {
   width: 177px;
   height: auto;
@@ -474,6 +478,10 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.navbar__search--mobile--visible, .navbar__user--mobile--visible {
+  display: none;
 }
 
 .breadcrumb-list {
@@ -786,7 +794,7 @@ template {
 
 .newsletter {
   position: relative;
-  padding: 98px 0 87px 0;
+  padding: 78px 0 67px 0;
   background-image: url("../img/newsletter/newsletter-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -929,7 +937,7 @@ template {
 
 .reviews-slider__button {
   position: absolute;
-  top: 50%;
+  top: 47%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 30px;
@@ -945,12 +953,12 @@ template {
 
 .reviews-slider__button--prev {
   background-image: url("../img/arrow-prev-secondary.svg");
-  left: 0;
+  left: 4px;
 }
 
 .reviews-slider__button--next {
   background-image: url("../img/arrow-next-secondary.svg");
-  right: 0;
+  right: 4px;
 }
 
 .reviews-slider__profile {
@@ -1131,6 +1139,10 @@ template {
       align-self: stretch;
 }
 
+.footer__legal {
+  margin-left: 70px;
+}
+
 .footer__categories {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
@@ -1169,6 +1181,7 @@ template {
 
 .footer__contacts-form {
   grid-column: span 2;
+  margin-bottom: 95px;
 }
 
 .footer__form {
@@ -1196,6 +1209,11 @@ template {
 
 .footer__title--inline {
   margin: 0 43px 0 0;
+}
+
+.footer__title--mb-3 {
+  margin: 0;
+  margin-bottom: 34px;
 }
 
 .footer__ul {
@@ -1279,6 +1297,42 @@ template {
   color: #E0E0E0;
 }
 
+.footer__lower {
+  grid-column: span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__lower-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: 279px;
+}
+
+.footer__lower-item {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 20px;
+}
+
+.footer__lower-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1305,7 +1359,7 @@ template {
 
 @media (max-width: 992px) {
   .container, .newslatter-wrapper {
-    max-width: 760px;
+    max-width: 745px;
   }
   .logo {
     width: 132px;
@@ -1404,6 +1458,13 @@ template {
     -ms-grid-row: 4;
     grid-row: 4;
   }
+  .footer__lower {
+    grid-column: span 6;
+  }
+  .footer__lower-item {
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1411,8 +1472,56 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  body {
+    padding-top: 78px;
+  }
+  .navbar__search--mobile--hidden, .navbar__user--mobile--hidden {
     display: none;
+  }
+  .navbar__search--mobile--visible, .navbar__user--mobile--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar__mobile--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+    padding-top: 30px;
+  }
+  .navbar-bottom--visible {
+    display: block;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile--visible {
+    display: block;
   }
   .menu-button {
     width: 16px;
@@ -1438,6 +1547,11 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .user__name--light {
+    color: #ffffff;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .stars {
     -ms-flex-preferred-size: auto;
@@ -1512,13 +1626,13 @@ template {
   }
   .reviews-slider__button--prev {
     left: 50%;
-    margin-left: -65px;
+    margin-left: -85px;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
   .reviews-slider__button--next {
     right: 50%;
-    margin-right: -65px;
+    margin-right: -85px;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
@@ -1533,6 +1647,13 @@ template {
   .footer__input {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .footer__legal {
+    margin-left: 0;
+  }
+  .footer__lower-list {
+    margin-right: 80px;
+    margin-left: 0;
   }
 }
 
@@ -1560,6 +1681,14 @@ template {
   }
   .card {
     width: 100%;
+  }
+  .reviews__title {
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+  .activities__title {
+    font-size: 18px;
+    margin-bottom: 36px;
   }
   .footer-wrapper {
     -ms-grid-columns: 1fr;
@@ -1607,6 +1736,12 @@ template {
     -ms-grid-column: 1;
     grid-column: 1;
   }
+  .footer__lower {
+    -ms-grid-row: 8;
+    grid-row: 8;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
   .footer__info {
     width: 100%;
     margin-top: 15px;
@@ -1614,6 +1749,38 @@ template {
   .footer__form {
     max-width: auto;
     min-height: 123px;
+  }
+  .footer__lower {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__lower-list {
+    margin: 0;
+  }
+  .footer__lower-pic {
+    margin-top: 10px;
+  }
+  .footer__lower-item {
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 279px;
+  }
+  .hotel-slider {
+    height: 179px;
+  }
+  .map {
+    height: 173px;
+  }
+  .footer {
+    padding-top: 69px;
+    padding-bottom: 21px;
+  }
+  .footer__lower-item {
+    margin-right: 6px;
   }
 }
 /*# sourceMappingURL=style.css.map */

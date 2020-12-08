@@ -14,20 +14,20 @@
 <body>
 
 
-  <header class="navbar">
+  <header class="navbar navbar__mobile--fixed">
     <div class="container">
       <div class="navbar-top">
         <a href="#" class="logo">
           <img src="img/header/horizontal-logo.svg" alt="" class="logo__image">
         </a>
-        <form action="#" class="search navbar__search">
+        <form action="#" class="search navbar__search navbar__search--mobile--hidden">
           <input type="text" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <img src="img/header/search.svg" alt="">
           </button>
         </form>
-        <a href="#" class="user navbar__user">
-          <img src="img//header/user-avatar.jpg" alt="" class="user__avatar">
+        <a href="#" class="user navbar__user navbar__user--mobile--hidden">
+          <img src="img/header/user-avatar.jpg" alt="" class="user__avatar">
           <span class="user__name">Nathan</span>
         </a>
         <button class="menu-button navbar-top__menu-button">
@@ -42,27 +42,41 @@
     <div class="navbar-bottom">
       <div class="container">
         <ul class="navbar-menu">
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">All Deals</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Hotels</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Activities</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Restaurants</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Events</a>
-        </li>
-        <li class="navbar-menu__item">
-          <a href="#" class="navbar-menu__link">Rodrigues</a>
-        </li>
+          <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <a href="#" class="user navbar__user navbar__user--mobile--visible">
+              <img src="img/header/user-avatar.jpg" alt="" class="user__avatar">
+              <span class="user__name user__name--light">Nathan</span>
+            </a>
+          </li>
+          <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <form action="#" class="search navbar__search navbar__search--mobile--visible">
+              <input type="text" class="search__input" placeholder="Search Location">
+              <button class="search__button">
+                <img src="img/header/search.svg" alt="">
+              </button>
+            </form>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">All Deals</a>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">Hotels</a>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">Activities</a>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+          </li>
+          <li class="navbar-menu__item ">
+            <a href="#" class="navbar-menu__link">Restaurants</a>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">Events</a>
+          </li>
+          <li class="navbar-menu__item">
+            <a href="#" class="navbar-menu__link">Rodrigues</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -133,9 +147,6 @@
             </div>
             <div class="swiper-slide hotel-slider__item">
               <img class="swiper-slide__image" src="img/hotel/sliders/slide-2.jpg" alt="">
-            </div>
-            <div class="swiper-slide hotel-slider__item">
-              <img class="swiper-slide__image" src="img/hotel/sliders/slide-3.jpg" alt="">
             </div>
             <div class="swiper-slide hotel-slider__item">
               <img class="swiper-slide__image" src="img/hotel/sliders/slide-4.jpg" alt="">
@@ -394,7 +405,7 @@
 
 
         <div class="footer__contact-details">
-          <h3 class="footer__title">Contact Details</h3>
+          <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
           <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
           <ul class="footer__ul">
             <li class="footer__item footer__item--mb-2">
@@ -423,7 +434,7 @@
 
 
         <div class="footer__contacts-form">
-          <h3 class="footer__title">Send us a message</h3>
+          <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
           <form action="#" class="footer__form">
             <input 
               type="text" 
@@ -445,6 +456,25 @@
           </form>
         </div>
 
+
+
+
+        <div class="footer__lower">
+          <ul class="footer__lower-list">
+            <li class="footer__lower-item">
+              <a href="" class="footer__lower-link">Disclaimer</a>
+            </li>
+            <li class="footer__lower-item">
+              <a href="" class="footer__lower-link">Conditions of use</a>
+            </li>
+            <li class="footer__lower-item">
+              <a href="" class="footer__lower-link">Cancellation policy</a>
+            </li>
+          </ul>
+          <div class="footer__lower-pic">
+            <img src="img/footer/lower/pay.svg" alt="" class="footer__lower-img">
+          </div>
+        </div>
       </div>
     </div>
   </footer>
