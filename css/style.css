@@ -1492,7 +1492,7 @@ template {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .navbar__mobile--fixed {
+  .navbar--fixed {
     position: fixed;
     left: 0;
     top: 0;
@@ -1658,6 +1658,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  .navbar__search {
+    width: 243px;
+  }
   .logo {
     width: 99px;
   }
