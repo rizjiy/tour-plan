@@ -58,5 +58,26 @@ function openModal() {
   modalOverlay.addClass('modal__overlay--visible');
   modalDialog.addClass('modal__dialog--visible');
 }
+
+
+
+$('.form').each(function() {
+  $(this).validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Name must be at least 2 characters long",
+      },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      },
+      phone: {
+        required: "Input Your phone number",
+      },
+    },
+  });
+})
 });
 
