@@ -75,15 +75,10 @@ $('.form').each(function() {
       },
       phone: {
         required: "Input Your phone number",
+        minlength: "your phone number must be 11 characters",
       },
     },
   });
 })
-
-$(document).ready(function(){
-  $('#phone').mask('+7 (999) 999-99-99');
-  $('#clear-if-not-match').mask("+7 (999) 999-99-99", {clearIfNotMatch: true});
-});
-
 });
 

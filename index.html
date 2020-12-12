@@ -456,8 +456,8 @@
               class="input footer__input"
               placeholder="Phone Number*"
               name="phone"
-              id="phone"
-              id="clear-if-not-match"
+              minlength="18"
+              data-mask="+7 (999) 999-99-99"
               required
               />
             </div>
@@ -518,8 +518,8 @@
               class="input modal__input"
               placeholder="Phone Number*"
               name="phone"
-              id="phone"
-              id="clear-if-not-match"
+              minlength="18"
+              data-mask="+7 (999) 999-99-99"
               required
             />
             <input 
@@ -531,7 +531,7 @@
             />
             <textarea 
             class="message modal__message"  
-            placeholder="Message"></textarea>
+            placeholder="Message" name="message"></textarea>
             <button class="button modal__button" type="submit">
               Send
             </button>
