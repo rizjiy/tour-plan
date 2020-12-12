@@ -205,11 +205,15 @@
       <h2 class="newsletter-title">subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2> 
-      <form action="#" class="subscribe newsletter__subscribe">
-      <input type="text" class="subscribe__input" placeholder="Your email address">
-        <button class="subscribe__button">
-          Send
-        </button>
+      <form action="#" class="form subscribe newsletter__subscribe">
+        <div class="subscribe__input-form">
+          <input type="email" required class="subscribe__input" placeholder="Your email address">
+        </div>
+        <div class="subscribe__button-form">
+          <button class="subscribe__button">
+            Send
+          </button>
+        </div>
       </form>
     </div>
   </section>
@@ -452,6 +456,8 @@
               class="input footer__input"
               placeholder="Phone Number*"
               name="phone"
+              id="phone"
+              id="clear-if-not-match"
               required
               />
             </div>
@@ -512,6 +518,8 @@
               class="input modal__input"
               placeholder="Phone Number*"
               name="phone"
+              id="phone"
+              id="clear-if-not-match"
               required
             />
             <input 
@@ -533,6 +541,7 @@
   </div>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -48,7 +48,7 @@ img {
   cursor: pointer;
 }
 
-.form {
+.modal__form, .footer__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -915,6 +915,10 @@ template {
   font-size: 14px;
   line-height: 18px;
   padding-right: 5px;
+}
+
+.subscribe__input-form {
+  width: 100%;
 }
 
 .subscribe__button {

@@ -79,5 +79,11 @@ $('.form').each(function() {
     },
   });
 })
+
+$(document).ready(function(){
+  $('#phone').mask('+7 (999) 999-99-99');
+  $('#clear-if-not-match').mask("+7 (999) 999-99-99", {clearIfNotMatch: true});
+});
+
 });
 
