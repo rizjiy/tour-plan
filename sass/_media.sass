@@ -16,9 +16,11 @@
                 flex-basis: 100%
         &__form
             width: auto
+        &__errors
+            flex-wrap: wrap
 @media ( max-width:992px)
     .container, .newslatter-wrapper
-        max-width: 745px
+        max-width: 715px
     .logo
         width: 132px
     .navbar
@@ -44,16 +46,25 @@
         &-slider
             width: 100%
     .reviews
+        &__title
+            font-size: 30px
+            margin-bottom: 50px
         &-slider
             &__item
                 max-width: 580px
+            &__button
+                top: 45%
+                &--prev
+                    left: 20px
+                &--next
+                    right: 20px
     .activities
         &-wrapper
             flex-wrap: wrap
         &__card
             margin-bottom: 20px
     .card
-        width: 360px
+        width: 340px
         height: 250px
     .footer
         &-wrapper
@@ -89,6 +100,8 @@
             &-item
                 margin-left: 0
                 margin-right: 20px
+            &-list
+                margin: 0
     .modal
         &__dialog
             padding: 33px 55px
@@ -311,6 +324,8 @@
     .hotel
         &-slider
             height: 179px
+        &-info
+            padding-bottom: 38px
     .map
         height: 173px
     .footer
@@ -319,3 +334,9 @@
         &__lower
             &-item
                 margin-right: 6px
+    .breadcrumb-list
+        padding: 0
+    .newsletter-title__strong
+        margin-top: 5px
+    .subscribe
+        width: 98%
